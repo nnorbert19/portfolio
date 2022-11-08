@@ -7,7 +7,7 @@ import "../../styles/projects.css";
 function Projects() {
   const { projects } = useContenful();
   return (
-    <div className="container" id="projects">
+    <section className="container" id="projects">
       <Row
         xs={1}
         sm={2}
@@ -20,7 +20,7 @@ function Projects() {
           <ProjectsLister key={index} value={project} />
         ))}
       </Row>
-    </div>
+    </section>
   );
 }
 

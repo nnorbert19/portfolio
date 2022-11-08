@@ -13,7 +13,7 @@ function ProjectsLister(value) {
           </Card.Body>
           <Card.Footer className="mt-auto justify-content-center d-flex">
             <button className="p-2 button m-2">
-              <a href="#projects" className="text-decoration-none">
+              <a href="" className="text-decoration-none">
                 More information
               </a>
             </button>

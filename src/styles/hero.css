@@ -39,7 +39,7 @@
   transition: all 0.3s ease-in-out;
 }
 .primary a {
-  color: black;
+  color: black !important;
   transition: all 0.3s ease-in-out;
 }
 
@@ -54,7 +54,7 @@
 }
 
 .primary:hover a {
-  color: var(--text);
+  color: var(--text) !important;
   transition: all 0.3s ease-in-out;
 }
 
@@ -70,7 +70,7 @@
   transition: all 0.3s ease-in-out;
 }
 .secondary a {
-  color: var(--text);
+  color: var(--text) !important;
   transition: all 0.3s ease-in-out;
 }
 
@@ -82,7 +82,7 @@
   transition: all 0.3s ease-in-out;
 }
 .secondary:hover a {
-  color: black;
+  color: black !important;
   transition: all 0.3s ease-in-out;
 }
 

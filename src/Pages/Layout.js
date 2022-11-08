@@ -5,7 +5,7 @@ function Layout() {
   return (
     <>
       <NavbarComponent />
-      <Outlet className="content" />
+      <Outlet />
     </>
   );
 }

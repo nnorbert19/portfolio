@@ -15,7 +15,7 @@
   transition: all 0.3s ease-in-out;
 }
 .button a {
-  color: black;
+  color: black !important;
   transition: all 0.3s ease-in-out;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .button:hover a {
-  color: var(--text);
+  color: var(--text) !important;
   transition: all 0.3s ease-in-out;
 }
 .button:active {
