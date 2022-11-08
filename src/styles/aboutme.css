@@ -1,0 +1,27 @@
+.about {
+  width: 75%;
+  min-height: 40vh;
+}
+
+.tabs {
+  border-radius: 10px;
+  background-color: var(--secondary);
+}
+
+#tabs-tab-aboutme,
+#tabs-tab-myskills,
+#tabs-tab-myhobbies {
+  color: var(--header);
+}
+
+#tabs-tab-aboutme:hover,
+#tabs-tab-myskills:hover,
+#tabs-tab-myhobbies:hover {
+  color: rgba(3, 48, 71, 0.5);
+}
+
+@media (max-width: 767px) {
+  .about {
+    width: 100%;
+  }
+}

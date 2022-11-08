@@ -1,0 +1,87 @@
+.hero {
+  width: 75%;
+  height: 90vh;
+  color: var(--text);
+}
+
+.hero-text {
+  display: grid;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.hero-text::before {
+  content: "";
+  display: inline-block;
+  height: 3px;
+  width: 100%;
+  background: var(--text);
+}
+.hero-text::after {
+  content: "";
+  display: inline-block;
+  height: 3px;
+  width: 100%;
+  background: var(--text);
+}
+
+.primary {
+  background-color: var(--button);
+  border-bottom: 2px solid var(--button);
+  color: black;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.primary a {
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+.primary:hover {
+  border-radius: 0;
+  color: var(--text);
+  background-color: transparent;
+  border-bottom: 2px solid var(--button);
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.primary:hover a {
+  color: var(--text);
+  transition: all 0.3s ease-in-out;
+}
+
+.secondary {
+  border: none;
+  background-color: transparent;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid var(--button);
+  transition: all 0.3s ease-in-out;
+}
+.secondary a {
+  color: var(--text);
+  transition: all 0.3s ease-in-out;
+}
+
+.secondary:hover {
+  background-color: var(--button);
+  border-radius: 5px;
+  border-top: 2px solid var(--button);
+  transform: scale(1.2);
+  box-shadow: 26px 26px 42px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 26px 26px 42px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 26px 26px 42px 0px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease-in-out;
+}
+.secondary:hover a {
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 767px) {
+  .hero {
+    width: 100%;
+  }
+}
