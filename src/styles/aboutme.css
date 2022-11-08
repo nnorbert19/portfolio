@@ -17,7 +17,7 @@
 #tabs-tab-aboutme:hover,
 #tabs-tab-myskills:hover,
 #tabs-tab-myhobbies:hover {
-  color: rgba(3, 48, 71, 0.5);
+  color: rgba(3, 48, 71, 0.7);
 }
 
 @media (max-width: 767px) {

@@ -6,7 +6,7 @@ import ContactMe from "../Components/Home/ContactMe";
 
 function Home() {
   return (
-    <div className="w-100 center">
+    <div className="container center">
       <Hero />
       <hr className="w-100" />
       <AboutMe />

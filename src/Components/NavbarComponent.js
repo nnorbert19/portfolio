@@ -6,6 +6,7 @@ import {
   Container,
   CloseButton,
 } from "react-bootstrap";
+import { Link } from "react-scroll";
 
 function NavbarComponent() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -43,26 +44,50 @@ function NavbarComponent() {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="align-items-end flex-grow-1 pe-3">
-                <Nav.Link className="mx-2" href="#home" onClick={handleClose}>
+                <Link
+                  className="mx-2 text-decoration-none"
+                  to="home"
+                  spy={true}
+                  smooth={true}
+                  offset={-85}
+                  duration={200}
+                  onClick={handleClose}
+                >
                   Home
-                </Nav.Link>
-                <Nav.Link className="mx-2 " href="#about" onClick={handleClose}>
+                </Link>
+                <Link
+                  className="mx-2 text-decoration-none"
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  offset={-85}
+                  duration={200}
+                  onClick={handleClose}
+                >
                   About
-                </Nav.Link>
-                <Nav.Link
-                  className="mx-2"
-                  href="#projects"
+                </Link>
+                <Link
+                  className="mx-2 text-decoration-none"
+                  to="projects"
+                  spy={true}
+                  smooth={true}
+                  offset={-85}
+                  duration={200}
                   onClick={handleClose}
                 >
                   Projects
-                </Nav.Link>
-                <Nav.Link
-                  className="mx-2"
-                  href="#contact"
+                </Link>
+                <Link
+                  className="mx-2 text-decoration-none"
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  offset={-85}
+                  duration={200}
                   onClick={handleClose}
                 >
                   Contact
-                </Nav.Link>
+                </Link>
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>

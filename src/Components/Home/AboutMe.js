@@ -8,7 +8,7 @@ import MySkills from "../About/MySkillsComponent";
 
 function AboutMe() {
   return (
-    <div className="container center my-5 about" id="about">
+    <section className="center my-5 about" id="about">
       <div className="center tabs w-100">
         <Tabs defaultActiveKey="aboutme" id="tabs" className="w-100" fill>
           <Tab eventKey="aboutme" title="About me" className="m-4">
@@ -22,7 +22,7 @@ function AboutMe() {
           </Tab>
         </Tabs>
       </div>
-    </div>
+    </section>
   );
 }
 

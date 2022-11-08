@@ -4,6 +4,10 @@
   --header: #033047;
   --text: #e0e0e0;
   --button: #ffb805;
+  --link-color: rgba(255, 255, 255, 0.75);
+  --link-hover-color: rgba(255, 255, 255, 0.85);
+  --link-active-color:rgba(255, 255, 255, 1)
+
   font-family: "Roboto", sans-serif;
   font-size: large;
   color: var(--text);
@@ -18,28 +22,53 @@
   --bs-nav-tabs-link-active-border-color: var(--header);
 }
 
+.navbar-nav a {
+  color: var(--link-color) ;
+  display: inline-block;
+  position: relative;
+}
+
+.navbar-nav a:hover {
+  color: var(--link-hover-color) ;
+  cursor: pointer;
+}
+
+.navbar-nav a.active{
+  color: var(--link-active-color);
+}
+
+.navbar-nav a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--button);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.navbar-nav a.active::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  transition: transform 0.25s ease-out;
+}
+
+
 body {
   background-color: var(--primary) !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.wrapper {
-  width: 100vw;
-  display: flex;
-  flex-direction: row;
-}
 .Header {
   background-color: var(--header);
 }
 
 .offcanvas-md {
   background-color: var(--header) !important;
-}
-.content {
-  overflow-y: auto;
-  width: 100%;
-  min-height: 100vh;
 }
 
 .center {
@@ -49,7 +78,7 @@ body {
   flex-direction: column;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+section {
+  min-height: 90vh;
+  display: flex;
 }
