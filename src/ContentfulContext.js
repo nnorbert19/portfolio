@@ -7,20 +7,21 @@ export function useContenful() {
 }
 
 const query = `query {
-    projectsCollection {
+    portfolioCollection {
       items {
         title
+        shortText
+        slug
         screenshot {
           url
         }
-        shortText
-        slug
         text {
           json
         }
       }
     }
   }
+  
   `;
 
 export function ContentfulProvider({ children }) {
@@ -40,8 +41,7 @@ export function ContentfulProvider({ children }) {
     );
     const body = await response.json();
     setLoading(false);
-    console.log(body.data);
-    return body.data;
+    return body.data.portfolioCollection.items;
   }
 
   useEffect(() => {

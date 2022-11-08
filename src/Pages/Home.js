@@ -8,9 +8,11 @@ function Home() {
   return (
     <div className="w-100 center">
       <Hero />
-      <hr />
+      <hr className="w-100" />
       <AboutMe />
+      <hr className="w-100" />
       <Projects />
+      <hr className="w-100" />
       <ContactMe />
     </div>
   );

@@ -6,6 +6,7 @@
   --button: #ffb805;
   font-family: "Roboto", sans-serif;
   font-size: large;
+  color: var(--text);
 
   --bs-navbar-color: rgba(255, 255, 255, 0.75);
   --bs-navbar-hover-color: rgba(255, 255, 255, 0.95);

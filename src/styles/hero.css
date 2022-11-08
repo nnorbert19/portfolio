@@ -29,9 +29,13 @@
 .primary {
   background-color: var(--button);
   border-bottom: 2px solid var(--button);
+  border-right: 2px solid var(--button);
   color: black;
   border: none;
   border-radius: 5px;
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease-in-out;
 }
 .primary a {
@@ -43,6 +47,7 @@
   border-radius: 0;
   color: var(--text);
   background-color: transparent;
+  border-right: 2px solid var(--button);
   border-bottom: 2px solid var(--button);
   transform: scale(1.2);
   transition: all 0.3s ease-in-out;
@@ -57,7 +62,11 @@
   border: none;
   background-color: transparent;
   border-top: 2px solid transparent;
+  border-right: 2px solid var(--button);
   border-bottom: 2px solid var(--button);
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease-in-out;
 }
 .secondary a {
@@ -68,11 +77,8 @@
 .secondary:hover {
   background-color: var(--button);
   border-radius: 5px;
-  border-top: 2px solid var(--button);
   transform: scale(1.2);
-  box-shadow: 26px 26px 42px 0px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 26px 26px 42px 0px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 26px 26px 42px 0px rgba(0, 0, 0, 0.25);
+
   transition: all 0.3s ease-in-out;
 }
 .secondary:hover a {
