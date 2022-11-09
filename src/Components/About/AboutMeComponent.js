@@ -1,4 +1,5 @@
 import React from "react";
+import Resume from "../../files/Nagy_Norbert_cv.pdf";
 
 function AboutMe() {
   return (
@@ -17,6 +18,9 @@ function AboutMe() {
         In the future I want to learn about UI/UX and some backend stuff, so I
         could become a Fullstack developer.
       </p>
+      <a href={Resume} download>
+        Download cv(hungarian)
+      </a>
     </div>
   );
 }
