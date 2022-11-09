@@ -6,11 +6,16 @@
 .tabs {
   border-radius: 10px;
   background-color: var(--secondary);
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
 #tabs-tab-aboutme,
 #tabs-tab-myskills,
-#tabs-tab-myhobbies {
+#tabs-tab-myhobbies,
+.tab-content p,
+.tab-content li {
   color: var(--header);
 }
 

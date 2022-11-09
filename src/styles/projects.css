@@ -1,7 +1,30 @@
 .card {
-  background-color: var(--header);
-  color: var(--text);
-  --bs-card-bg: var(--header);
+  background-color: var(--secondary);
+  color: var(--header);
+  --bs-card-bg: var(--secondary);
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 10px 15px 10px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.card-title,
+.card-body p {
+  color: var(--header);
+}
+
+.card-img {
+  filter: grayscale(100%);
+  filter: gray;
+  -webkit-filter: grayscale(100%);
+  transition: all 0.5s ease;
+}
+
+.card-img:hover {
+  filter: grayscale(0%);
+  filter: gray;
+  -webkit-filter: grayscale(0%);
+  filter: none;
+  transition: 0.5s ease;
 }
 
 .button {
@@ -14,7 +37,7 @@
   box-shadow: 0 9px #999;
   transition: all 0.3s ease-in-out;
 }
-.button a {
+.button {
   color: black !important;
   transition: all 0.3s ease-in-out;
 }
@@ -23,12 +46,18 @@
   background-color: rgba(255, 184, 5, 0.5);
 }
 
-.button:hover a {
-  color: var(--text) !important;
-  transition: all 0.3s ease-in-out;
-}
 .button:active {
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+.modal-title,
+.modal-body > p,
+.modal-link {
+  color: var(--header) !important;
+}
+
+.modal-image {
+  float: right;
+  margin: 5px;
 }

@@ -1,0 +1,33 @@
+.form {
+  background-color: var(--secondary);
+}
+
+.form .title {
+  color: var(--header) !important;
+}
+
+.form > .row label {
+  color: var(--header) !important;
+}
+
+.form .form-control {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid var(--header);
+}
+
+.form .form-control:focus {
+  box-shadow: none;
+  border-radius: 0;
+  border-bottom: 2px solid var(--button);
+}
+
+.contact-information {
+  background-color: var(--button);
+  color: var(--header);
+}
+.contact-information > h3,
+.contact-information > p {
+  color: var(--header);
+}
