@@ -1,28 +1,31 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import Form from "react-bootstrap/Form";
-import { ToastContainer, toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../../styles/contact.css";
 
 function ContactForm() {
-  emailjs.init("ldBfeHIx0I1k8M-GM");
-  const [show, setShow] = useState(false);
+  emailjs.init(process.env.REACT_APP_EMAIL_PUBLIC_KEY);
+  const [loading, setLoading] = useState(false);
   function handleSubmit(e) {
     e.preventDefault();
+    setLoading(true);
 
     emailjs
       .sendForm(
-        "service_md4by0i",
-        "template_dfysiur",
+        process.env.REACT_APP_EMAIL_SERVICE_ID,
+        process.env.REACT_APP_EMAIL_TEMPLATE,
         e.target,
-        "ldBfeHIx0I1k8M-GM"
+        process.env.REACT_APP_EMAIL_PUBLIC_KEY
       )
       .then(
         (result) => {
-          console.log(result.status);
-          if (result.status === 200) {
-            toast.success("E-mail sent successfully", {
+          setLoading(false);
+          console.log(result);
+          if (result.status == 200) {
+            console.log("ok");
+            toast.success("E-mail sent successfully.", {
               position: "bottom-center",
               autoClose: 5000,
               hideProgressBar: false,
@@ -32,11 +35,23 @@ function ContactForm() {
               progress: undefined,
               theme: "dark",
             });
-          } else {
           }
         },
         (error) => {
-          console.log(error.text);
+          setLoading(false);
+          toast.error(
+            `Something went wrong. Try again later. error: ${error}`,
+            {
+              position: "bottom-center",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "dark",
+            }
+          );
         }
       );
 
@@ -93,7 +108,12 @@ function ContactForm() {
             />
           </Form.Group>
           <Form.Group className="center">
-            <button type="submit" value="Send" className="button px-2">
+            <button
+              type="submit"
+              value="Send"
+              disabled={loading}
+              className="button px-2"
+            >
               Send
             </button>
           </Form.Group>

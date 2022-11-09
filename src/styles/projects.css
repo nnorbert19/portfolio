@@ -53,6 +53,9 @@
 }
 .modal-title,
 .modal-body > p,
+.modal-body h3,
+.modal-body ul li,
+.modal-body ul li p,
 .modal-link {
   color: var(--header) !important;
 }

@@ -29,11 +29,11 @@ function ProjectsLister(value) {
           <Modal.Title>{value.value.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
+          {documentToReactComponents(value.value.text.json)}
           <img
             src={value.value.screenshot.url}
-            className="w-25 modal-image"
+            className="w-100 modal-image"
           ></img>
-          {documentToReactComponents(value.value.text.json)}
         </Modal.Body>
         <Modal.Footer>
           <div>
@@ -43,7 +43,7 @@ function ProjectsLister(value) {
                   href={value.value.link}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-decoration-none modal-link"
+                  className="text-decoration-none modal-link p-3"
                 >
                   See the challenge
                 </a>
@@ -56,7 +56,7 @@ function ProjectsLister(value) {
                 href={value.value.linkToLive}
                 target="_blank"
                 rel="noreferrer"
-                className="text-decoration-none modal-link"
+                className="text-decoration-none modal-link p-3"
               >
                 Live site
               </a>
