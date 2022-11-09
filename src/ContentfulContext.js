@@ -7,22 +7,22 @@ export function useContenful() {
 }
 
 const query = `query {
-    portfolioCollection {
-      items {
-        title
-        shortText
-        slug
-        screenshot {
-          url
-        }
-        text {
-          json
-        }
+  portfolioCollection {
+    items {
+      title
+      link
+      linkToLive
+      shortText
+      slug
+      screenshot {
+        url
+      }
+      text {
+        json
       }
     }
   }
-  
-  `;
+}`;
 
 export function ContentfulProvider({ children }) {
   const [loading, setLoading] = useState(true);

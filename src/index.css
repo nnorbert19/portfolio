@@ -1,16 +1,19 @@
 * {
   --primary: #219ebc;
-  --secondary: #8ecae6;
+  --secondary: #fffdec;
   --header: #033047;
   --text: #e0e0e0;
   --button: #ffb805;
   --link-color: rgba(255, 255, 255, 0.75);
   --link-hover-color: rgba(255, 255, 255, 0.85);
-  --link-active-color:rgba(255, 255, 255, 1)
+  --link-active-color: rgba(255, 255, 255, 1);
 
   font-family: "Roboto", sans-serif;
   font-size: large;
   color: var(--text);
+
+  --bs-link-color: var(var(--header)) !important;
+  --bs-modal-bg: var(var(--secondary));
 
   --bs-navbar-color: rgba(255, 255, 255, 0.75);
   --bs-navbar-hover-color: rgba(255, 255, 255, 0.95);
@@ -23,22 +26,22 @@
 }
 
 .navbar-nav a {
-  color: var(--link-color) ;
+  color: var(--link-color);
   display: inline-block;
   position: relative;
 }
 
 .navbar-nav a:hover {
-  color: var(--link-hover-color) ;
+  color: var(--link-hover-color);
   cursor: pointer;
 }
 
-.navbar-nav a.active{
+.navbar-nav a.active {
   color: var(--link-active-color);
 }
 
 .navbar-nav a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);
@@ -55,7 +58,6 @@
   transform-origin: bottom left;
   transition: transform 0.25s ease-out;
 }
-
 
 body {
   background-color: var(--primary) !important;
@@ -81,4 +83,7 @@ body {
 section {
   min-height: 90vh;
   display: flex;
+}
+.scroll-to-top {
+  cursor: pointer;
 }
