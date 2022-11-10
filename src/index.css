@@ -23,6 +23,7 @@
   --bs-nav-tabs-link-active-color: var(--header);
   --bs-nav-tabs-link-active-bg: var(--button);
   --bs-nav-tabs-link-active-border-color: var(--header);
+  overflow-x: visible;
 }
 
 .navbar-nav a {

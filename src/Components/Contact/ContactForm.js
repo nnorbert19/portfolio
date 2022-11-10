@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import Form from "react-bootstrap/Form";
+import "react-toastify/dist/ReactToastify.min.css";
 import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import "../../styles/contact.css";
 
-function ContactForm() {
+function ContactForm(ref) {
   emailjs.init(process.env.REACT_APP_EMAIL_PUBLIC_KEY);
   const [loading, setLoading] = useState(false);
   function handleSubmit(e) {
@@ -21,37 +21,20 @@ function ContactForm() {
       )
       .then(
         (result) => {
+          toast.success("E-mail sent successfully.", {
+            position: "bottom-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
           setLoading(false);
-          console.log(result);
-          if (result.status == 200) {
-            console.log("ok");
-            toast.success("E-mail sent successfully.", {
-              position: "bottom-center",
-              autoClose: 5000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: true,
-              progress: undefined,
-              theme: "dark",
-            });
-          } else {
-            toast.error(
-              `Something went wrong. Try again later. error: ${result}`,
-              {
-                position: "bottom-center",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "dark",
-              }
-            );
-          }
         },
         (error) => {
+          console.log(error);
           toast.error(
             `Something went wrong. Try again later. error: ${error}`,
             {
@@ -68,9 +51,9 @@ function ContactForm() {
           setLoading(false);
         }
       );
-
     e.target.reset();
   }
+  console.log(ref);
   return (
     <>
       <div className="form col-12 col-lg-7 col-md-7 col-xl-7 col-xxl-7">
@@ -132,6 +115,7 @@ function ContactForm() {
             </button>
           </Form.Group>
         </Form>
+        <ToastContainer />
       </div>
     </>
   );
