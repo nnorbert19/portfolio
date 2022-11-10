@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.min.css";
 import { toast, ToastContainer } from "react-toastify";
 import "../../styles/contact.css";
 
-function ContactForm() {
+function ContactForm(ref) {
   emailjs.init(process.env.REACT_APP_EMAIL_PUBLIC_KEY);
   const [loading, setLoading] = useState(false);
   function handleSubmit(e) {
@@ -53,6 +53,7 @@ function ContactForm() {
       );
     e.target.reset();
   }
+  console.log(ref);
   return (
     <>
       <div className="form col-12 col-lg-7 col-md-7 col-xl-7 col-xxl-7">
