@@ -53,7 +53,6 @@ function ContactForm(ref) {
       );
     e.target.reset();
   }
-  console.log(ref);
   return (
     <>
       <div className="form col-12 col-lg-7 col-md-7 col-xl-7 col-xxl-7">
