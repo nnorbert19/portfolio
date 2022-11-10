@@ -35,10 +35,23 @@ function ContactForm() {
               progress: undefined,
               theme: "dark",
             });
+          } else {
+            toast.error(
+              `Something went wrong. Try again later. error: ${result}`,
+              {
+                position: "bottom-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+              }
+            );
           }
         },
         (error) => {
-          setLoading(false);
           toast.error(
             `Something went wrong. Try again later. error: ${error}`,
             {
@@ -52,6 +65,7 @@ function ContactForm() {
               theme: "dark",
             }
           );
+          setLoading(false);
         }
       );
 
