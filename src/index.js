@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ContentfulProvider } from "./ContentfulContext";
 import Home from "./Pages/Home";
 import Layout from "./Pages/Layout";
-import NoPage from "./Pages/NoPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
