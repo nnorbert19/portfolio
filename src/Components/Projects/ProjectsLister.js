@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { Card, Col } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { motion, useInView } from "framer-motion";

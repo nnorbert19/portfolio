@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import { useContenful } from "../../ContentfulContext";
-import Row from "react-bootstrap/Row";
 import ProjectsLister from "../Projects/ProjectsLister";
 import "../../styles/projects.css";
 import { motion, useInView } from "framer-motion";
